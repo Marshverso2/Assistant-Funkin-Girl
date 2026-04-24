@@ -61,6 +61,7 @@ function Menu {
     Write-Host "          WinScript (GIT): flick9000"
     Write-Host "       Remove Windows 11 AI (GIT): zoicware"
     Write-Host ""
+    Write-Host "                    Version 0.1"
     Write-Host "======================================================"
 }
 
