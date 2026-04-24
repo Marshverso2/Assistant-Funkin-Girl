@@ -96,7 +96,6 @@ function Check-RAM { mdsched }
 function Perf { SystemPropertiesPerformance }
 function DNS { ipconfig /flushdns; Pause }
 
-# NETWORK
 function Restart-Network {
     Disable-NetAdapter -Name "Ethernet" -Confirm:$false
     Start-Sleep 10
@@ -110,7 +109,6 @@ function Fix-Network {
     Pause
 }
 
-# APPS
 function Apps { explorer shell:AppsFolder }
 function Winget-List { winget list; Pause }
 function Uninstall-App {
@@ -133,7 +131,6 @@ function SysInfo { systeminfo; Pause }
 function AV { mrt }
 function Maintenance { msdt.exe /id MaintenanceDiagnostic }
 
-# ONLINE SCRIPTS
 function MicroWin { irm https://christitus.com/win | iex }
 function MAS { irm https://get.activated.win | iex }
 function WinScript { irm https://winscript.cc/irm | iex }
