@@ -1,12 +1,14 @@
 $pag = 0
 $pagmax = 4
 
+$Host.UI.RawUI.WindowSize = New-Object Management.Automation.Host.Size(54, 25)
+
 function Pause { Read-Host "Press Enter to continue" }
 
 function Menu {
     Clear-Host
     Write-Host ""
-    Write-Host "        /ASSISTANT FUNKIN GIRL\" -ForegroundColor Cyan
+    Write-Host "               /ASSISTANT FUNKIN GIRL\" -ForegroundColor Cyan
     Write-Host "======================================================"
 
     switch ($pag) {
@@ -51,7 +53,14 @@ function Menu {
     Write-Host ""
     Write-Host "0. Change Page"
     Write-Host "======================================================"
+    Write-Host ""
     Write-Host "Creator: Marshverso (YT) \ Beta Tester: FandeFNF (YT)"
+    Write-Host ""
+    Write-Host "       MicroWin (GIT): Chris Titus Tech"
+    Write-Host "Microsoft Activation Scripts (GIT): thecatontheceiling"
+    Write-Host "          WinScript (GIT): flick9000"
+    Write-Host "       Remove Windows 11 AI (GIT): zoicware"
+    Write-Host ""
     Write-Host "======================================================"
 }
 
