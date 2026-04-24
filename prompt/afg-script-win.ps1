@@ -40,7 +40,7 @@ function Menu {
             "7. Maintenance"
         }
         default {
-            "        AREA GITHUB"
+            "                     AREA GITHUB"
             "1. MicroWin"
             "2. Microsoft Activation Scripts"
             "3. WinScript"
