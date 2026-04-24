@@ -54,7 +54,7 @@ function Menu {
     Write-Host "0. Change Page"
     Write-Host "======================================================"
     Write-Host ""
-    Write-Host "Creator: Marshverso (YT) \ Beta Tester: FandeFNF (YT)"
+    Write-Host "Creator: Marshverso (YT) \ Beta Tester: SouFande (YT)"
     Write-Host ""
     Write-Host "       MicroWin (GIT): Chris Titus Tech"
     Write-Host "Microsoft Activation Scripts (GIT): thecatontheceiling"
