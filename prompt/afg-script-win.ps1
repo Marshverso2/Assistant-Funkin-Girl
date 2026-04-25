@@ -96,6 +96,10 @@ function Check-RAM { mdsched }
 function Perf { SystemPropertiesPerformance }
 function DNS { ipconfig /flushdns; Pause }
 
+
+
+
+
 function Restart-Network {
     Disable-NetAdapter -Name "Ethernet" -Confirm:$false
     Start-Sleep 10
@@ -112,18 +116,29 @@ function Fix-Network {
 function Apps { explorer shell:AppsFolder }
 function Winget-List { winget list; Pause }
 function Uninstall-App {
-    $app = Read-Host "App name"
+    $app = Read-Host "App id: "
     winget uninstall $app
     Pause
 }
 function Update-Apps { winget upgrade --all; Pause }
 
+function SystemSettings { 
+    msconfig
+}
+
+
+
+
+
 function Disable-Hibernation { powercfg -h off; Pause }
+
 function Disable-WU {
-    Stop-Service wuauserv -Force
-    Set-Service wuauserv -StartupType Disabled
+    Stop-Service -Name wuauserv -Force -ErrorAction Stop
+    Set-Service -Name wuauserv -StartupType Disabled
+    Write-Host "Successfully disabled"
     Pause
 }
+
 function Power-Diag { powercfg -energy; Pause }
 function BIOS { shutdown /r /fw /t 0 }
 function SysInfo { systeminfo; Pause }
@@ -142,6 +157,7 @@ function Donate { start "https://youtu.be/dQw4w9WgXcQ" }
 while ($true) {
     Menu
     $opt = Read-Host "Select"
+    Clear-Host
 
     if ($opt -eq "0") {
         $pag++
