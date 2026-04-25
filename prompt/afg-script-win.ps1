@@ -118,7 +118,6 @@ function Uninstall-App {
 }
 function Update-Apps { winget upgrade --all; Pause }
 
-# SYSTEM
 function Disable-Hibernation { powercfg -h off; Pause }
 function Disable-WU {
     Stop-Service wuauserv -Force
@@ -131,10 +130,10 @@ function SysInfo { systeminfo; Pause }
 function AV { mrt }
 function Maintenance { msdt.exe /id MaintenanceDiagnostic }
 
-function MicroWin { irm https://christitus.com/win | iex }
-function MAS { irm https://get.activated.win | iex }
-function WinScript { irm https://winscript.cc/irm | iex }
-function Remove-AI { irm https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1 | iex }
+function MicroWin { irm "https://christitus.com/win" | iex }
+function MAS { irm "https://get.activated.win" | iex }
+function WinScript { irm "https://winscript.cc/irm" | iex }
+function Remove-AI { & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) }
 function GitHub { start "https://github.com/Marshverso2/Assistant-Funkin-Girl" }
 function Donate { start "https://youtu.be/dQw4w9WgXcQ" }
 
